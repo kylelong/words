@@ -33,13 +33,14 @@ function Search() {
 
   return (
     <>
-      <Container fluid={true}>
+      <Container fluid>
         <Row>
-          <Col md={6}>
-            {" "}
-            <Form inline>
-              <Form.Label htmlFor="input">Word Search </Form.Label>
-              <Form.Group>
+          {" "}
+          <Form inline>
+            <Form.Label htmlFor="input">Word Search </Form.Label>
+            <Form.Group>
+              <Col md={6}>
+                {" "}
                 <Form.Control
                   onChange={(e) => setVocab(e.target.value)}
                   type="text"
@@ -47,12 +48,12 @@ function Search() {
                   className="mx-sm-3"
                   id="input"
                 />
-              </Form.Group>
-              <Button onClick={() => setWord(vocab)} variant="outline-primary">
-                Search
-              </Button>
-            </Form>
-          </Col>
+              </Col>
+            </Form.Group>
+            <Button onClick={() => setWord(vocab)} variant="outline-primary">
+              Search
+            </Button>
+          </Form>
         </Row>
       </Container>
       {load && (
