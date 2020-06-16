@@ -5,11 +5,12 @@ import Axios from "axios";
 import Word from "./Word";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Form from "react-bootstrap/Form";
-import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 function Search() {
-  const [data, setData] = useState(null);
   const [vocab, setVocab] = useState("");
   const [word, setWord] = useState("");
   const [speech, setSpeech] = useState("");
@@ -32,21 +33,28 @@ function Search() {
 
   return (
     <>
-      <Form inline>
-        <Form.Label htmlFor="input">Word Search </Form.Label>
-        <Form.Group>
-          <Form.Control
-            onChange={(e) => setVocab(e.target.value)}
-            type="text"
-            placeholder="Enter a word"
-            className="mx-sm-3"
-            id="input"
-          />
-          <Button onClick={() => setWord(vocab)} variant="outline-primary">
-            Search
-          </Button>
-        </Form.Group>
-      </Form>
+      <Container fluid={true}>
+        <Row>
+          <Col md={6}>
+            {" "}
+            <Form inline>
+              <Form.Label htmlFor="input">Word Search </Form.Label>
+              <Form.Group>
+                <Form.Control
+                  onChange={(e) => setVocab(e.target.value)}
+                  type="text"
+                  placeholder="Enter a word"
+                  className="mx-sm-3"
+                  id="input"
+                />
+              </Form.Group>
+              <Button onClick={() => setWord(vocab)} variant="outline-primary">
+                Search
+              </Button>
+            </Form>
+          </Col>
+        </Row>
+      </Container>
       {load && (
         <Word
           word={word}

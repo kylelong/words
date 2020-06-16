@@ -5,3 +5,9 @@ https://dashboard.heroku.com/apps/words-site
 
 Sample request: google.json
 words: galvanize
+
+To do:
+
+1. Add button functionality : Click "Add" add word to list of learn words. Displays words learned in a table.
+2. Click on word in table and it shows the words definition. 
+3. Stats: # of different part of speech of words learned. 
