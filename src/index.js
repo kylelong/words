@@ -33,14 +33,14 @@ function Search() {
 
   return (
     <>
+      <h2 className="title">Words</h2>
+
       <Container fluid>
         <Row>
           {" "}
           <Form inline>
-            <Form.Label htmlFor="input">Word Search </Form.Label>
             <Form.Group>
-              <Col md={6}>
-                {" "}
+              <Col>
                 <Form.Control
                   onChange={(e) => setVocab(e.target.value)}
                   type="text"
@@ -56,6 +56,7 @@ function Search() {
           </Form>
         </Row>
       </Container>
+
       {load && (
         <Word
           word={word}
