@@ -4,10 +4,13 @@ https://api.dictionaryapi.dev/api/v2/entries/en/valiant
 https://dashboard.heroku.com/apps/words-site
 
 Sample request: google.json
-words: galvanize
+words: galvanize, abetting
 
 To do:
 
 1. Add button functionality : Click "Add" add word to list of learn words. Displays words learned in a table.
 2. Click on word in table and it shows the words definition. 
 3. Stats: # of different part of speech of words learned. 
+
+Clean it up: Put App in App.js
+Send function to Word from App so localStorage comes from App
