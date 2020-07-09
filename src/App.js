@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import "./index.css";
+import "./App.css";
 import Axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
+import ListGroup from "react-bootstrap/ListGroup";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
@@ -39,17 +40,12 @@ function App() {
   return (
     <>
       <h2 className="title">Words</h2>
-      <div>
-        {/* {this.setState({ words: localStorage.getItem("words") })} */}
-        {words.map((word, index) => (
-          <div key={index}> {word} </div>
-        ))}
-      </div>
-      <Container fluid>
-        <Row>
+
+      <Container className="d-flex justify-content-center">
+        <Row className="text-center">
           {" "}
-          <Form inline>
-            <Form.Group>
+          <Form>
+            <Form.Group className="align-items-center">
               <Col>
                 <Form.Control
                   onChange={(e) => setVocab(e.target.value)}
@@ -68,8 +64,11 @@ function App() {
       </Container>
 
       {load && (
-        <div className="container-fluid">
-          <Card style={{ width: "18rem" }}>
+        <Container className=" mt-5 d-flex justify-content-center">
+          <Card
+            className="h-100 shadow-sm bg-white rounded"
+            style={{ width: "18rem" }}
+          >
             <Card.Header></Card.Header>
             <Card.Body>
               <Card.Title>{word}</Card.Title>
@@ -78,12 +77,17 @@ function App() {
               </Card.Subtitle>
               <Card.Text>{definition}</Card.Text>
               {example && <Card.Text>"{example}"</Card.Text>}
+              <Button
+                className="mt-auto font-weight-bold"
+                variant="outline-success"
+                onClick={() => addToList()}
+                block
+              >
+                Add
+              </Button>
             </Card.Body>
           </Card>
-          <Button variant="outline-success" onClick={() => addToList()}>
-            Add
-          </Button>
-        </div>
+        </Container>
       )}
     </>
   );
