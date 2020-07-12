@@ -16,15 +16,15 @@ Clean it up: Put App in App.js
 Send function to Word from App so localStorage comes from App
 
 https://mdbootstrap.com/docs/react/layout/grid-examples/
-
-      <Card style={{ width: "18rem" }}>
-        <Card.Header className="text-center">Learned Words</Card.Header>
-        <ListGroup variant="flush">
-          {/* {this.setState({ words: localStorage.getItem("words") })} */}
-          {words.map((word, index) => (
-            <ListGroup.Item className="text-center" key={index}>
-              {word}{" "}
-            </ListGroup.Item>
-          ))}
-        </ListGroup>
-      </Card>
+    {words.length > 0 && (
+        <div id="learned">
+          <h3>Learned Words</h3>
+          <ul>
+            {words.map((word, index) => (
+              <li key={index} onClick={(e) => viewWord(e)}>
+                {word}{" "}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
