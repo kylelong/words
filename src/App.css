@@ -7,6 +7,56 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.wave-container {
+  position: relative;
+  /* background: #09f; */
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+.wave-container > svg {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -100;
+}
+#one {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+}
+#two {
+  position: absolute;
+  top: 5%;
+  right: 13%;
+}
+#three {
+  position: absolute;
+  top: 23%;
+  right: 16%;
+}
+#four {
+  position: absolute;
+  top: 10%;
+  right: 1%;
+}
+#five {
+  position: absolute;
+  top: 3%;
+  left: 32%;
+}
+#six {
+  position: absolute;
+  top: 20%;
+  left: 24%;
+}
+@media (max-width: 1200px) {
+  .shapes {
+    display: none;
+  }
+}
 .title {
   font-family: Helvetica Neue, sans-serif;
   font-weight: bold;
@@ -73,6 +123,12 @@ body {
 #wordBox svg {
   position: relative;
   top: 6px;
+}
+#err {
+  width: 350px;
+  position: relative;
+  left: 30px;
+  bottom: 34px;
 }
 /* Learned words list */
 #learned {
