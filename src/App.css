@@ -13,6 +13,7 @@ body {
   color: #fff;
   text-align: center;
   overflow: hidden;
+  z-index: -100;
 }
 .wave-container > svg {
   display: block;
@@ -24,8 +25,8 @@ body {
 }
 #one {
   position: absolute;
-  top: 10%;
-  left: 20%;
+  top: 5%;
+  left: 15%;
 }
 #two {
   position: absolute;
@@ -44,13 +45,18 @@ body {
 }
 #five {
   position: absolute;
-  top: 3%;
-  left: 32%;
+  top: 17%;
+  left: 22%;
 }
 #six {
   position: absolute;
-  top: 20%;
-  left: 24%;
+  top: 42%;
+  left: 22%;
+}
+#seven {
+  position: absolute;
+  top: 35%;
+  right: 3%;
 }
 @media (max-width: 1200px) {
   .shapes {
@@ -84,6 +90,7 @@ body {
   background-color: #fff;
   background-clip: padding-box;
   box-shadow: none;
+  z-index: 1000;
 }
 #header button {
   position: relative;

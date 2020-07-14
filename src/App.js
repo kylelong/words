@@ -29,12 +29,10 @@ function App() {
     setWord(vocab);
     setLoad(true);
     if (load && word === "") {
-      console.log(err);
       setErr(true);
     }
   }
   function viewWord(e) {
-    console.log(words.length);
     setLoad(true);
     setWord(e.target.innerText);
   }
@@ -177,6 +175,24 @@ function App() {
                     0, 24.240000000000002 0, 24
             "
             fill="#9446ED"
+          ></path>
+        </svg>
+
+        <svg
+          className="shapes"
+          id="seven"
+          viewbox="0 0 200 200"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="
+                M 0, 18
+                C 0, 4.5 4.5, 0 18, 0
+                S 36, 4.5 36, 18
+                    31.5, 36 18, 36
+                    0, 31.5 0, 18
+            "
+            fill="#2DCCA7"
           ></path>
         </svg>
 
